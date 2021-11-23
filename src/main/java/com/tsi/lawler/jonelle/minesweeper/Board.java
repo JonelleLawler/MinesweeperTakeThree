@@ -45,17 +45,19 @@ public class Board {
                 int randomNum = (int) (Math.random() * (this.width));
 
                 // BOMB = TRUE
-               if(randomNum == 7)
+               if(randomNum == 7 && bombCount < bombs)
                 {
                     // set tile type and output
                    this.coords[r][c].SetType(1);
+                   bombCount++;
                     System.out.print(" * ");
                 }
                // BOMB = TRUE
-                else if(randomNum == 9)
+                else if(randomNum == 9 && bombCount < bombs)
                 {
                     // set tile type and output
                    this.coords[r][c].SetType(1);
+                    bombCount++;
                     System.out.print(" * ");
                 }
                 // BOMB = FALSE
