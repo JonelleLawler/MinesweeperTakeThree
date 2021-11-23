@@ -8,7 +8,7 @@ public class Board {
     private int bombs;
     boolean isBomb;
     int bombCount;
-
+    GameStates current;
 
 
     // Board constructor
@@ -19,6 +19,7 @@ public class Board {
         this.coords = new Tile[this.height][this.width];
         this.bombCount = 0; // 0 whenever game resets
         InitTileArr();
+        current = GameStates.PLAY;
     }
 
     public void InitTileArr()
