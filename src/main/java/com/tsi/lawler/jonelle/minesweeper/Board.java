@@ -3,9 +3,9 @@ package com.tsi.lawler.jonelle.minesweeper;
 public class Board {
     // Variables
     public Tile[][] coords;
-    private int height;
-    private int width;
-    private int bombs;
+    public int height;
+    public int width;
+    public int bombs;
     boolean isBomb;
     int bombCount;
     GameStates current;

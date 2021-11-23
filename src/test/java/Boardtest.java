@@ -66,9 +66,19 @@ public class Boardtest {
     @Test
     public void TestBombCount()
     {
-        Board testBoard = new Board(15, 15, 52);
+        Board testBoard = new Board(15, 15, 2);
         assertNotEquals(0, testBoard.GetBombCount());
 
     }
+
+    @Test
+    public void TestBoardConstructor()
+    {
+        Board testBoard = new Board(10, 10, 2);
+        assertEquals(testBoard.height, 10 );
+        assertEquals(testBoard.width, 10);
+        assertEquals(testBoard.bombs, 2);
+    }
+
 
 }
