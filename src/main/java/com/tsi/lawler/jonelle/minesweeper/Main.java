@@ -1,6 +1,4 @@
 package com.tsi.lawler.jonelle.minesweeper;
-
-
 import java.util.Scanner;
 
 public class Main
