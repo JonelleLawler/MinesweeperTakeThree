@@ -50,32 +50,28 @@ public class Boardtest {
     public void TestCheckLeftNeighbour()
     {
         Board testBoard = new Board(5, 5, 2);
-        int testVal = testBoard.checkLeftNeighbour(3, 3);
-        assertNotEquals(testVal, 3);
+        assertNotEquals(testBoard.checkLeftNeighbour(3, 3), 3);
     }
 
     @Test
     public void TestCheckRightNeighbour()
     {
         Board testBoard = new Board(5, 5, 2);
-        int testVal = testBoard.checkLeftNeighbour(3, 3);
-        assertNotEquals(testVal, 3);
+        assertNotEquals(testBoard.checkLeftNeighbour(3, 3), 3);
     }
 
     @Test
     public void TestCheckUpwardsNeighbour()
     {
         Board testBoard = new Board(5, 5, 2);
-        int testVal = testBoard.checkLeftNeighbour(3, 3);
-        assertNotEquals(testVal, 3);
+        assertNotEquals(testBoard.checkLeftNeighbour(3, 3), 3);
     }
 
     @Test
     public void TestCheckDownwardsNeighbour()
     {
         Board testBoard = new Board(5, 5, 2);
-        int testVal = testBoard.checkLeftNeighbour(3, 3);
-        assertNotEquals(testVal, 3);
+        assertNotEquals(testBoard.checkLeftNeighbour(3, 3), 3);
     }
 
 }
