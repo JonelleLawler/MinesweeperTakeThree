@@ -63,4 +63,10 @@ public class Board {
         return sum;
     }
 
+    // get size of board
+    public int GetSize()
+    {
+        return this.height * this.width;
+    }
+
 }
