@@ -65,6 +65,10 @@ public class Board {
         }
     }
 
+    public boolean GetBomb()
+    {
+        return isBomb;
+    }
     public void SetBombCount()
     {
         bombCount = bombCount + 1;
