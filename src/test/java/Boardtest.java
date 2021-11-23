@@ -64,12 +64,22 @@ public class Boardtest {
     }
 
     @Test
-    public void TestBombCount()
-    {
+    public void TestBombCountThroughGame(){
         Board testBoard = new Board(15, 15, 2);
         assertNotEquals(0, testBoard.GetBombCount());
 
     }
+
+    @Test
+    public void TestSetBombCount()
+    {
+        Board testBoard = new Board(15, 15, 5);
+        int initialBombCount = testBoard.GetBombCount();
+        testBoard.SetBombCount();
+        assertNotEquals(testBoard.GetBombCount(), initialBombCount);
+    }
+
+
 
     @Test
     public void TestBoardConstructor()
@@ -79,6 +89,7 @@ public class Boardtest {
         assertEquals(testBoard.width, 10);
         assertEquals(testBoard.bombs, 2);
     }
+
 
 
 }
