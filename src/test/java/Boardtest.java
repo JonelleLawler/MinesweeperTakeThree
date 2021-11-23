@@ -1,8 +1,7 @@
 import com.tsi.lawler.jonelle.minesweeper.Board;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 
 public class Boardtest {
@@ -47,5 +46,36 @@ public class Boardtest {
         }
     }
 
+    @Test
+    public void TestCheckLeftNeighbour()
+    {
+        Board testBoard = new Board(5, 5, 2);
+        int testVal = testBoard.checkLeftNeighbour(3, 3);
+        assertNotEquals(testVal, 3);
+    }
+
+    @Test
+    public void TestCheckRightNeighbour()
+    {
+        Board testBoard = new Board(5, 5, 2);
+        int testVal = testBoard.checkLeftNeighbour(3, 3);
+        assertNotEquals(testVal, 3);
+    }
+
+    @Test
+    public void TestCheckUpwardsNeighbour()
+    {
+        Board testBoard = new Board(5, 5, 2);
+        int testVal = testBoard.checkLeftNeighbour(3, 3);
+        assertNotEquals(testVal, 3);
+    }
+
+    @Test
+    public void TestCheckDownwardsNeighbour()
+    {
+        Board testBoard = new Board(5, 5, 2);
+        int testVal = testBoard.checkLeftNeighbour(3, 3);
+        assertNotEquals(testVal, 3);
+    }
 
 }
