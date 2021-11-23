@@ -1,7 +1,5 @@
 package com.tsi.lawler.jonelle.minesweeper;
 
-import java.util.Random;
-
 public class Board {
     // Variables
     private int[][] coords;
@@ -31,10 +29,15 @@ public class Board {
         for (int r = 0; r < this.height; r++) {
             for (int c = 0; c < this.width; c++)
             {
-               Random rand = new Random(this.width % 1);
-                if(rand.equals(1) || rand.equals(2) || rand.equals(8))
+                int randomNum = (int) (Math.random() * (this.width));
+
+               if(randomNum == 7)
                 {
-                    System.out.print("*");
+                    System.out.print(" * ");
+                }
+                else if(randomNum == 9)
+                {
+                    System.out.print(" * ");
                 }
                 else {
                     System.out.print(" X ");
@@ -69,6 +72,7 @@ public class Board {
     {
         return isBomb;
     }
+
     public void SetBombCount()
     {
         bombCount = bombCount + 1;
