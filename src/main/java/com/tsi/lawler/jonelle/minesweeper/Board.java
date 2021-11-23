@@ -12,6 +12,7 @@ public class Board {
     int bombCount;
 
 
+
     // Board constructor
     public Board(int h, int w, int b) {
         this.height = h;
@@ -22,24 +23,45 @@ public class Board {
         this.bombCount = 0; // 0 whenever game resets
     }
 
+  /*  public void InitTiles()
+    {
+        for(int i = 0; i < this.width; i++)
+        {
+            for(int j = 0; i < this.height; j++)
+            {
+                tileArray[i][j] = new Tile();
+            }
+        }
+    } */
 
     // Set up the board
 
     public void InitBoard() {
+       // InitTiles();
         for (int r = 0; r < this.height; r++) {
             for (int c = 0; c < this.width; c++)
             {
                 int randomNum = (int) (Math.random() * (this.width));
 
+                // BOMB = TRUE
                if(randomNum == 7)
                 {
+                    // set tile type and output
+               //     tileArray[r][c].SetType(1);
                     System.out.print(" * ");
                 }
+               // BOMB = TRUE
                 else if(randomNum == 9)
                 {
+                    // set tile type and output
+                   // tileArray[r][c].SetType(1);
                     System.out.print(" * ");
                 }
-                else {
+                // BOMB = FALSE
+                else
+                {
+                    // set tile type and output
+                  //  tileArray[r][c].SetType(2);
                     System.out.print(" X ");
                 }
             }
