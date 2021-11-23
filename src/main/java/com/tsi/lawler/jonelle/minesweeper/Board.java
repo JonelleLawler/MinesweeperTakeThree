@@ -70,6 +70,77 @@ public class Board {
         }
     }
 
+    public int checkLeftNeighbour(int r, int c)
+    {
+        int boolVal = 3; // empty val
+
+        if(this.coords[r - 1][c] != null) // check that tile exists first
+        {
+            if(this.coords[r -1][c].GetType() == 1)
+            {
+              boolVal = 1;
+            }
+            else
+            {
+                boolVal = 2; // not a bomb
+            }
+        }
+       return boolVal;
+    }
+
+    public int checkRightNeighbour(int r, int c)
+    {
+        int boolVal = 3; // empty val
+
+        if(this.coords[r + 1][c] != null) // check that tile exists first
+        {
+            if(this.coords[r + 1][c].GetType() == 1)
+            {
+                boolVal = 1;
+            }
+            else
+            {
+                boolVal = 2; // not a bomb
+            }
+        }
+        return boolVal;
+    }
+
+    public int checkUpwardsNeighbour(int r, int c)
+    {
+        int boolVal = 3; // empty val
+
+        if(this.coords[r][c - 1] != null) // check that tile exists first
+        {
+            if(this.coords[r][c - 1].GetType() == 1)
+            {
+                boolVal = 1;
+            }
+            else
+            {
+                boolVal = 2; // not a bomb
+            }
+        }
+        return boolVal;
+    }
+
+    public int checkDownwardsNeighbour(int r, int c)
+    {
+        int boolVal = 3; // empty val
+
+        if(this.coords[r][c + 1] != null) // check that tile exists first
+        {
+            if(this.coords[r][c + 1].GetType() == 1)
+            {
+                boolVal = 1;
+            }
+            else
+            {
+                boolVal = 2; // not a bomb
+            }
+        }
+        return boolVal;
+    }
 
 
     // get size of board

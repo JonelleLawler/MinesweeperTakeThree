@@ -23,4 +23,9 @@ public class Tile {
         }
     };
 
+    public int GetType()
+    {
+        return type;
+    }
+
 }
