@@ -2,7 +2,7 @@ package com.tsi.lawler.jonelle.minesweeper;
 
 public class Board {
     // Variables
-    private Tile[][] coords;
+    public Tile[][] coords;
     private int height;
     private int width;
     private int bombs;
