@@ -19,6 +19,7 @@ public class Board {
         this.coords = new Tile[this.height][this.width];
         this.bombCount = 0; // 0 whenever game resets
         InitTileArr();
+        InitBoard();
         current = GameStates.PLAY;
     }
 
@@ -47,7 +48,7 @@ public class Board {
                 {
                     // set tile type and output
                    this.coords[r][c].SetType(1);
-                   bombCount++;
+                   SetBombCount();
                     System.out.print(" * ");
                 }
                // BOMB = TRUE
@@ -55,7 +56,7 @@ public class Board {
                 {
                     // set tile type and output
                    this.coords[r][c].SetType(1);
-                    bombCount++;
+                    SetBombCount();
                     System.out.print(" * ");
                 }
                 // BOMB = FALSE
@@ -133,10 +134,12 @@ public class Board {
             if(this.coords[r][c + 1].GetType() == 1)
             {
                 boolVal = 1;
+                SetBombCount();
             }
             else
             {
                 boolVal = 2; // not a bomb
+                SetBombCount();
             }
         }
         return boolVal;
@@ -150,18 +153,6 @@ public class Board {
     }
 
 
-    public void SetBomb(int num)
-    {
-        if(num == 1)
-        {
-            isBomb = true;
-        }
-        else
-        {
-            isBomb = false;
-        }
-    }
-
     public boolean GetBomb()
     {
         return isBomb;
@@ -170,6 +161,11 @@ public class Board {
     public void SetBombCount()
     {
         bombCount = bombCount + 1;
+    }
+
+    public int GetBombCount()
+    {
+        return bombCount;
     }
 
 }

@@ -20,17 +20,6 @@ public class Boardtest {
         assertEquals(h * w, testBoard.GetSize());
     }
 
-    @Test
-    public void TestSetBomb()
-    {
-        Board testBoard = new Board(h, w,10);
-        boolean testBomb = true;
-        boolean testBomb2 = false;
-        testBoard.SetBomb(1);
-        testBomb2 = testBoard.GetBomb();
-
-        assertEquals(testBomb, testBomb2);
-    }
 
     @Test
     public void TestArray()
@@ -72,6 +61,14 @@ public class Boardtest {
     {
         Board testBoard = new Board(5, 5, 2);
         assertNotEquals(testBoard.checkLeftNeighbour(3, 3), 3);
+    }
+
+    @Test
+    public void TestBombCount()
+    {
+        Board testBoard = new Board(15, 15, 52);
+        assertNotEquals(0, testBoard.GetBombCount());
+
     }
 
 }
