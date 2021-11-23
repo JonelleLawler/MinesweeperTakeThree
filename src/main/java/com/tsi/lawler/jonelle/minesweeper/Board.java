@@ -3,11 +3,9 @@ package com.tsi.lawler.jonelle.minesweeper;
 public class Board {
     // Variables
     private Tile[][] coords;
-    private boolean[][] board;
     private int height;
     private int width;
     private int bombs;
-    private boolean endGame;
     boolean isBomb;
     int bombCount;
 
@@ -19,7 +17,6 @@ public class Board {
         this.width = w;
         this.bombs = b;
         this.coords = new Tile[this.height][this.width];
-        this.board = new boolean[this.height][this.width];
         this.bombCount = 0; // 0 whenever game resets
         InitTileArr();
     }
