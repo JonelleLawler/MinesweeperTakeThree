@@ -1,5 +1,5 @@
 package com.tsi.lawler.jonelle.minesweeper;
 
 public enum GameStates {
-    PLAY, GAME_OVER
+    INTRO, PLAY, TAKING_TURN, TURN_OVER, GAME_OVER
 }
