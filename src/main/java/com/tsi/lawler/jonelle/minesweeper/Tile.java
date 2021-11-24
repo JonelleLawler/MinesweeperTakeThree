@@ -3,7 +3,7 @@ package com.tsi.lawler.jonelle.minesweeper;
 public class Tile {
 
     // Variables
-    int type;
+    public int type;
 
     public Tile()
     {

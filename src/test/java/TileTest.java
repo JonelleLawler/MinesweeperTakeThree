@@ -12,8 +12,14 @@ public class TileTest {
         testTile.SetType(1);
 
         int testValue = testTile.GetType();
-
         assertEquals(testValue, 1);
+    }
+
+    @Test
+    public void TestConstructor()
+    {
+        Tile testTile = new Tile();
+        assertEquals(testTile.type, 2);
     }
 
 }
