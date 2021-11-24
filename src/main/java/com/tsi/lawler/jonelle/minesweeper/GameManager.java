@@ -29,10 +29,12 @@ public class GameManager {
         switch(currentState)
         {
             case INTRO:
+                player.WelcomeFunction();
                 break;
             case PLAY:
                 break;
             case TAKING_TURN:
+                player.TakeTurn();
                 break;
             case TURN_OVER:
                 break;
@@ -40,5 +42,11 @@ public class GameManager {
                 break;
 
         }
+    }
+
+    public boolean CheckTileCoords(int row, int col)
+    {
+        return true;
+
     }
 }
