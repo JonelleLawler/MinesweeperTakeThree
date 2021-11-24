@@ -85,9 +85,9 @@ public class Boardtest {
     public void TestBoardConstructor()
     {
         Board testBoard = new Board(10, 10, 2);
-        assertEquals(testBoard.height, 10 );
-        assertEquals(testBoard.width, 10);
-        assertEquals(testBoard.bombs, 2);
+        assertEquals(10, testBoard.height );
+        assertEquals(10, testBoard.width);
+        assertEquals(2, testBoard.bombs);
     }
 
 
