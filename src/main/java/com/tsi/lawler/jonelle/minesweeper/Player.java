@@ -40,7 +40,7 @@ public class Player {
             }
             else
             {
-                // check tile legit 
+                // check tile legit
             }
         }
 
